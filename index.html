@@ -5,16 +5,16 @@
   </head>
   <body>
     <h1>Generate Unique</h1>
-    <button onclick="generateURL()">Generate URL</button>
-    <p id="url"></p>
+    <button onclick="generate()">Generate</button>
+    <p id="unique"></p>
     <script>
-      function generateURL() {
-        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-        let url = '';
+      function generate() {
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+        let unique = ''
         for (let i = 0; i < 10; i++) {
-          url += characters.charAt(Math.floor(Math.random() * characters.length));
+          unique += characters.charAt(Math.floor(Math.random() * characters.length))
         }
-        document.getElementById('url').innerHTML = `Your unique URL is: http://yourdomain.com/${url}`;
+        document.getElementById('unique').innerHTML = unique
       }
     </script>
   </body>
