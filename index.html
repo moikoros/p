@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Generate Unique</title>
+  </head>
+  <body>
+    <h1>Generate Unique</h1>
+    <button onclick="generateURL()">Generate URL</button>
+    <p id="url"></p>
+    <script>
+      function generateURL() {
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        let url = '';
+        for (let i = 0; i < 10; i++) {
+          url += characters.charAt(Math.floor(Math.random() * characters.length));
+        }
+        document.getElementById('url').innerHTML = `Your unique URL is: http://yourdomain.com/${url}`;
+      }
+    </script>
+  </body>
+</html>
